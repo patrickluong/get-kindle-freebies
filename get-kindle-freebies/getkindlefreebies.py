@@ -33,7 +33,7 @@ def main():
     browser = None
 
     if should_open_browser:
-        # For Google Chrome on Windows: usually "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s --incognito"
+        # For Google Chrome on Windows: brower_path usually = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s --incognito"
         browser_path = "your browser here"
         browser = webbrowser.get(browser_path)
 
