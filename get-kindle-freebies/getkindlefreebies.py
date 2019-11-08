@@ -31,13 +31,11 @@ def main():
 
     browser_path = None
     browser = None
-    first = None
 
     if should_open_browser:
         # For Google Chrome on Windows: usually "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s --incognito"
         browser_path = "your browser here"
         browser = webbrowser.get(browser_path)
-        first = True
 
     for submission in reddit.subreddit('KindleFreebies').new(limit=posts_limit):
         print('\n' + '-' * 52 + ' POST ' + '-' * 52 + '\n')        
