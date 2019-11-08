@@ -29,13 +29,14 @@ def main():
     if len(sys.argv) > 2:
         posts_limit = int(sys.argv[2])
 
-    chrome_path = None
+    browser_path = None
     browser = None
     first = None
 
-    if should_open_browser:  
-        chrome_path = r"C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s --incognito"
-        browser = webbrowser.get(chrome_path)
+    if should_open_browser:
+        # For Google Chrome on Windows: usually "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s --incognito"
+        browser_path = "your browser here"
+        browser = webbrowser.get(browser_path)
         first = True
 
     for submission in reddit.subreddit('KindleFreebies').new(limit=posts_limit):
